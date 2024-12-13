@@ -2,8 +2,8 @@ name: learn-github-actions
 on: [push]
 jobs:
   check-bats-version:
-    runs-on: ubuntu-20.04-16core
-      group: boateng
+    runs-on: 
+      group: ubuntu-20.04-16core
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
