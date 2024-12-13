@@ -5,8 +5,7 @@ jobs:
     name: ONTA
     runs-on: 
       group: ent/monyong
-      labels: [ self-hosted, cicak ]
-
+      labels: cicak
     strategy:
       max-parallel: 100
       fail-fast: false
