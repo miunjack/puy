@@ -3,7 +3,7 @@ on: [push]
 jobs:
   check-bats-version:
     runs-on: ubuntu-20.04-16core
-      group: ubuntu-runners
+      group: boateng
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
