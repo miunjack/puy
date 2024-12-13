@@ -12,4 +12,17 @@ jobs:
   build:
 runs-on:
   group: ent/miunjack
-  labels: [ self-hosted, monyong ]
+  labels: monyong
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        uut: [1, 2]
+        pante: [A, B, C, D, E, F, G, H, I, J]
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: |
+			echo 'abah'
