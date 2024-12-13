@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: cok
+    runs-on: cicak
     strategy:
       max-parallel: 20
       fail-fast: false
