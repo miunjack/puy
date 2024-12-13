@@ -2,8 +2,7 @@ name: learn-github-actions
 on: [push]
 jobs:
   check-bats-version:
-    runs-on: 
-      group: Default
+    runs-on: bismillah
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
