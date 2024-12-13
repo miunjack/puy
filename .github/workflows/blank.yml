@@ -1,12 +1,26 @@
-name: learn-github-actions
-on: [push]
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
 jobs:
-  check-bats-version:
-    runs-on: bismillah
+  build:
+    runs-on: macos-12
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        uut: [1, 2]
+        pante: [A, B, C, D, E, F, G, H, I, J]
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+
+      - name: Run a one-line script
+        run: |
+			echo 'abah'
