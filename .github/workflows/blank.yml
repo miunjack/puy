@@ -10,7 +10,8 @@ on:
 
 jobs:
   build:
-    runs-on: cicak
+    runs-on: 
+      group: monyong
     strategy:
       max-parallel: 20
       fail-fast: false
