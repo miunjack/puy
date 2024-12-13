@@ -4,8 +4,7 @@ jobs:
   build:
     name: ONTA
     runs-on: 
-      group: ent/miunjack
-      labels: [ self-hosted, monyong ]
+      group: ent/monyong
     strategy:
       max-parallel: 100
       fail-fast: false
